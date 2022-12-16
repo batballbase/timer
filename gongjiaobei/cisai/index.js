@@ -202,3 +202,13 @@ var huanjie9_fan_timeend = setInterval(function(){
 var huanjie9_fan_time30sec = setInterval(function(){
     time30sec_trigger("#time_huanjie9_fan", huanjie9_fan_time30sec);
 }, 1000);
+
+
+
+// Huanjie 10
+var huanjie10_zheng_timeend = setInterval(function(){
+    timeend_trigger("#time_huanjie10_zheng", huanjie10_zheng_timeend);
+}, 1000);
+var huanjie10_zheng_time30sec = setInterval(function(){
+    time30sec_trigger("#time_huanjie10_zheng", huanjie10_zheng_time30sec);
+}, 1000);

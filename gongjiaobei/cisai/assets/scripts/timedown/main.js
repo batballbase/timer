@@ -235,6 +235,18 @@ define(function (require, exports, module) {
 
 
 
+    // Huanjie 10
+    $("#time_huanjie10_zheng").custimer({
+        time_length: 300,
+        begin_btn_id: "beginBtn_huanjie10_zheng",
+        stop_btn_id: "stopBtn_huanjie10_zheng",
+        reset_btn_id: 'resetBtn_huanjie10_zheng',
+    });
+    
+
+
+
+
 
     var matrix = [
         [
