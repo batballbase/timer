@@ -154,14 +154,46 @@ define(function (require, exports, module) {
         time_length: 240,
         begin_btn_id: "beginBtn_huanjie8_zheng",
         stop_btn_id: "stopBtn_huanjie8_zheng",
-        reset_btn_id: 'resetBtn_huanjie8_zheng',
+        reset_btn_id: 'resetBtn_huanjie8_shuangfang',
     });
 
     $("#time_huanjie8_fan").custimer({
         time_length: 240,
         begin_btn_id: "beginBtn_huanjie8_fan",
         stop_btn_id: "stopBtn_huanjie8_fan",
-        reset_btn_id: 'resetBtn_huanjie8_fan',
+        reset_btn_id: 'resetBtn_huanjie8_shuangfang',
+    });
+
+    // Button
+    var status_huanjie8 = 2;
+
+    $("#beginBtn_huanjie8_zheng").on('click', function () {
+        status_huanjie8 = 1;
+    });
+    $("#beginBtn_huanjie8_fan").on('click', function () {
+        status_huanjie8 = 0;
+    });
+    $("#switchBtn_huanjie8").on('click', function () {
+        if (status_huanjie8 == 1) {
+            $("#stopBtn_huanjie8_zheng").click();
+            $("#beginBtn_huanjie8_fan").click();
+        } else if (status_huanjie8 == 0) {
+            $("#stopBtn_huanjie8_fan").click();
+            $("#beginBtn_huanjie8_zheng").click();
+        } else {
+            $("#beginBtn_huanjie8_zheng").click();
+        }
+    });
+
+    $("#resetBtn_huanjie8_shuangfang").on('click', function () {
+        $("#stopBtn_huanjie8_zheng").click();
+        $("#stopBtn_huanjie8_fan").click();
+        status_huanjie8 = 2;
+    });
+
+    $("#stopBtn_huanjie8_shuangfang").on('click', function () {
+        $("#stopBtn_huanjie8_zheng").click();
+        $("#stopBtn_huanjie8_fan").click();
     });
 
 
