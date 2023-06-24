@@ -34,8 +34,9 @@ function timeend_trigger(timeID, setInterval_var){
 
     if (timeID_val == time_end) {
         time_end_audio();
-        
-        $(timeID).text("00:00 "); //A blank (invisible) space added at the end of time value so that it is not equal to "00:00", which may trigger alarm
+        // Clear interval so that function will not be constantly checking for time d 
+        // Which means after time end audio trigger, webpage will need to be refreshed to restart time check function
+        clearInterval(setInterval_var);
     }
 }
 
@@ -44,6 +45,8 @@ function time30sec_trigger(timeID, setInterval_var){
     var time_30sec = "00:30";
     if (timeID_val == time_30sec) {
         time_30sec_audio();
+
+        clearInterval(setInterval_var);
     }
 }
 
@@ -134,6 +137,22 @@ var huanjie5_fan_time30sec = setInterval(function(){
 
 
 
+// Huanjie 6
+var huanjie6_zheng_timeend = setInterval(function(){
+    timeend_trigger("#time_huanjie6_zheng", huanjie6_zheng_timeend);
+}, 1000);
+var huanjie6_zheng_time30sec = setInterval(function(){
+    time30sec_trigger("#time_huanjie6_zheng", huanjie6_zheng_time30sec);
+}, 1000);
+
+var huanjie6_fan_timeend = setInterval(function(){
+    timeend_trigger("#time_huanjie6_fan", huanjie6_fan_timeend);
+}, 1000);
+var huanjie6_fan_time30sec = setInterval(function(){
+    time30sec_trigger("#time_huanjie6_fan", huanjie6_fan_time30sec);
+}, 1000);
+
+
 
 // Huanjie 7
 var huanjie7_zheng_timeend = setInterval(function(){
@@ -169,27 +188,11 @@ var huanjie8_fan_time30sec = setInterval(function(){
 
 
 
-// Huanjie 6
-var huanjie6_fan_timeend = setInterval(function(){
-    timeend_trigger("#time_huanjie6_fan", huanjie6_fan_timeend);
-}, 1000);
-var huanjie6_fan_time30sec = setInterval(function(){
-    time30sec_trigger("#time_huanjie6_fan", huanjie6_fan_time30sec);
-}, 1000);
-
-
 
 // Huanjie 9
-var huanjie9_zheng_timeend = setInterval(function(){
-    timeend_trigger("#time_huanjie9_zheng", huanjie9_zheng_timeend);
+var huanjie9_timeend = setInterval(function(){
+    timeend_trigger("#time_huanjie9", huanjie9_timeend);
 }, 1000);
-var huanjie9_zheng_time30sec = setInterval(function(){
-    time30sec_trigger("#time_huanjie9_zheng", huanjie9_zheng_time30sec);
-}, 1000);
-
-var huanjie9_fan_timeend = setInterval(function(){
-    timeend_trigger("#time_huanjie9_fan", huanjie9_fan_timeend);
-}, 1000);
-var huanjie9_fan_time30sec = setInterval(function(){
-    time30sec_trigger("#time_huanjie9_fan", huanjie9_fan_time30sec);
+var huanjie9_time30sec = setInterval(function(){
+    time30sec_trigger("#time_huanjie9", huanjie9_time30sec);
 }, 1000);

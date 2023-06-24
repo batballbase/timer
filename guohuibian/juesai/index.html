@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
-    <title>公教杯</title>
+    <title>国会辩 - 附加赛</title>
     <link rel="stylesheet" href="assets/scripts/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/scripts/jquery_onepage/css/onepage-scroll.css">
     <link rel="stylesheet" href="assets/styles/index.css">
@@ -23,9 +23,9 @@
         <div class="row" style="height: 64.5vh;"></div>
         <div class="row">
             <div class="col-12 text-center align-items-center">
-                <button class="btn-outline-light btn-lg" onclick="time_30sec_audio()">30秒铃声</button>
+                <button class="btn-outline-dark btn-lg" onclick="time_30sec_audio()" style="background-color: transparent;">30秒铃声</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="btn-outline-light btn-lg" onclick="time_end_audio()">结束铃声</button>
+                <button class="btn-outline-dark btn-lg" onclick="time_end_audio()" style="background-color: transparent;">结束铃声</button>
             </div>
         </div>
     </div>
@@ -41,14 +41,14 @@
         <div class="row margin-top-md">
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_left">正方</h1>
+                    <h1 class="bian_name_left">执政党</h1>
                 </div>
             </div>
             <div class="col-lg-2 text-center">
             </div>
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_right">反方</h1>
+                    <h1 class="bian_name_right">反对党</h1>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="col-lg-2 text-center">
-                <span class="text-center" style="color: black; font-size: 4.5rem">立论</span>
+                <span class="text-center">申论 · 质询</span>
             </div>
             <div class="col-lg-5 text-center">
                 <h1 id="time_huanjie1_fan"></h1>
@@ -93,14 +93,14 @@
         <div class="row margin-top-md">
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_left">正方</h1>
+                    <h1 class="bian_name_left">执政党</h1>
                 </div>
             </div>
             <div class="col-lg-2 text-center">
             </div>
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_right">反方</h1>
+                    <h1 class="bian_name_right">反对党</h1>
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <div class="col-lg-2 text-center">
-                <span class="text-center" style="color: black; font-size: 4.5rem">质询</span>
+                <span class="text-center">质询 · 申论</span>
             </div>
             <div class="col-lg-5 text-center">
                 <h1 id="time_huanjie2_fan"></h1>
@@ -145,14 +145,14 @@
         <div class="row margin-top-md">
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_left">正方</h1>
+                    <h1 class="bian_name_left">执政党</h1>
                 </div>
             </div>
             <div class="col-lg-2 text-center">
             </div>
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_right">反方</h1>
+                    <h1 class="bian_name_right">反对党</h1>
                 </div>
             </div>
         </div>
@@ -169,7 +169,7 @@
                 </div>
             </div>
             <div class="col-lg-2 text-center">
-                <span class="text-center" style="color: black; font-size: 4.5rem">质询小结</span>
+                <span class="text-center">申论 · 质询</span>
             </div>
             <div class="col-lg-5 text-center">
                 <h1 id="time_huanjie3_fan"></h1>
@@ -191,47 +191,54 @@
 
     <!-- Double Timer, Huanjie 4 -->
     <div class="container-fluid">
+        <!-- Push content down -->
         <div class="row text-center margin-top-sm"></div>
 
         <div class="row margin-top-md">
-            <!-- 正方 -->
-            <div class="col-lg-5 text-center">
-                <h1 class="bian_name_left">正方</h1>
-                <h1 id="time_huanjie4_zheng"></h1>
-                <div style="display:none;">
-                    <button id="beginBtn_huanjie4_zheng" class="btnStart">开始</button>
-                    <button id="stopBtn_huanjie4_zheng" class="btnPause">停止</button>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">执政党</h1>
                 </div>
             </div>
-            <!-- Time and Buttons -->
             <div class="col-lg-2 text-center">
-                <div class="huanjiespace_top"></div>
-
-                <span class="text-center" style="color: black; font-size: 4.5rem">攻辩</span>
-
-                <div class="buttonspace_top"></div>
-                <div class="btn-group" role="group">
-
-                    <button id="switchBtn_huanjie4" class="btnStart">切换</button>
-                    <button id="stopBtn_huanjie4_shuangfang" class="btnPause">停止</button>
-                    <button id="resetBtn_huanjie4_shuangfang" class="btnReset">重置</button></button>
-                </div>
             </div>
-            <!-- 持方 -->
-            <div class="col-lg-5 text-center">
-                <h1 class="bian_name_right">反方</h1>
-                <h1 id="time_huanjie4_fan"></h1>
-                <div style="display:none;">
-                    <button id="beginBtn_huanjie4_fan" class="btnStart">开始</button>
-                    <button id="stopBtn_huanjie4_fan" class="btnPause">停止</button>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反对党</h1>
                 </div>
             </div>
         </div>
+
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie4_zheng"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_huanjie4_zheng" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie4_zheng" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie4_zheng" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">质询 · 申论</span>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie4_fan"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_huanjie4_fan" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie4_fan" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie4_fan" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
     </div>
-    <!-- Double Timer End, Huanjie 4 -->    
+    <!-- Double Timer End, Huanjie 4 -->
 
 
-    
+
 
 
     <!-- Double Timer, Huanjie 5 -->
@@ -242,14 +249,14 @@
         <div class="row margin-top-md">
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_left">正方</h1>
+                    <h1 class="bian_name_left">执政党</h1>
                 </div>
             </div>
             <div class="col-lg-2 text-center">
             </div>
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_right">反方</h1>
+                    <h1 class="bian_name_right">反对党</h1>
                 </div>
             </div>
         </div>
@@ -266,7 +273,7 @@
                 </div>
             </div>
             <div class="col-lg-2 text-center">
-                <span class="text-center" style="color: black; font-size: 4.5rem">驳论</span>
+                <span class="text-center">申论 · 质询</span>
             </div>
             <div class="col-lg-5 text-center">
                 <h1 id="time_huanjie5_fan"></h1>
@@ -285,47 +292,97 @@
 
 
 
-    <!-- Double Timer, Huanjie 8 -->
+
+    <!-- Double Timer, Huanjie 6 -->
     <div class="container-fluid">
+        <!-- Push content down -->
         <div class="row text-center margin-top-sm"></div>
 
         <div class="row margin-top-md">
-            <!-- 正方 -->
-            <div class="col-lg-5 text-center">
-                <h1 class="bian_name_left">正方</h1>
-                <h1 id="time_huanjie8_zheng"></h1>
-                <div style="display:none;">
-                    <button id="beginBtn_huanjie8_zheng" class="btnStart">开始</button>
-                    <button id="stopBtn_huanjie8_zheng" class="btnPause">停止</button>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">执政党</h1>
                 </div>
             </div>
-            <!-- Time and Buttons -->
             <div class="col-lg-2 text-center">
-                <div class="huanjiespace_top"></div>
-
-                <span class="text-center" style="color: black; font-size: 4.5rem">自由辩</span>
-
-                <div class="buttonspace_top"></div>
-                <div class="btn-group" role="group">
-
-                    <button id="switchBtn_huanjie8" class="btnStart">切换</button>
-                    <button id="stopBtn_huanjie8_shuangfang" class="btnPause">停止</button>
-                    <button id="resetBtn_huanjie8_shuangfang" class="btnReset">重置</button></button>
-                </div>
             </div>
-            <!-- 持方 -->
-            <div class="col-lg-5 text-center">
-                <h1 class="bian_name_right">反方</h1>
-                <h1 id="time_huanjie8_fan"></h1>
-                <div style="display:none;">
-                    <button id="beginBtn_huanjie8_fan" class="btnStart">开始</button>
-                    <button id="stopBtn_huanjie8_fan" class="btnPause">停止</button>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反对党</h1>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Double Timer End, Huanjie 8 -->
 
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie6_zheng"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_huanjie6_zheng" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie6_zheng" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie6_zheng" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">质询 · 申论</span>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie6_fan"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_huanjie6_fan" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie6_fan" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie6_fan" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Double Timer End, Huanjie 6 -->
+
+
+
+
+    <!-- Double Timer, Huanjie 9 -->
+    <div class="container-fluid">
+        <!-- Push content down -->
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <h1 class="bian_name_left">中休</h1>
+            </div>
+            <div class="col-lg-5">
+                <div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <div class="btn-group" role="group">
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <h1 id="time_huanjie9"></h1>
+                <button id="beginBtn_huanjie9" class="btnStart">开始</button>
+                <button id="stopBtn_huanjie9" class="btnPause">停止</button>
+                <button id="resetBtn_huanjie9" class="btnReset">重置</button>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="btn-group" role="group" >
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Double Timer End, Huanjie 9 -->      
 
 
 
@@ -339,14 +396,14 @@
         <div class="row margin-top-md">
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_left">正方</h1>
+                    <h1 class="bian_name_left">执政党</h1>
                 </div>
             </div>
             <div class="col-lg-2 text-center">
             </div>
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_right">反方</h1>
+                    <h1 class="bian_name_right">反对党</h1>
                 </div>
             </div>
         </div>
@@ -363,7 +420,7 @@
                 </div>
             </div>
             <div class="col-lg-2 text-center">
-                <span class="text-center" style="color: black; font-size: 4.5rem">总结</span>
+                <span class="text-center">总结</span>
             </div>
             <div class="col-lg-5 text-center">
                 <h1 id="time_huanjie7_fan"></h1>
@@ -377,46 +434,13 @@
             </div>
         </div>
     </div>
-    <!-- Double Timer End, Huanjie 7 -->
+    <!-- Double Timer End, Huanjie 7 -->  
 
 
 
 
 
-    <!-- Single Timer, Huanjie 6 -->
-    <div class="container-fluid">
-        <!-- Push content down -->
-        <div class="row text-center margin-top-sm"></div>
-
-        <div class="row margin-top-md">
-            <div class="col-lg-12">
-                <div>
-                    <h1 class="bian_name_left">评审点评</h1>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 id="time_huanjie6_fan"></h1>
-
-                <div class="btn-group" role="group" >
-                    <button id="beginBtn_huanjie6_fan" class="btnStart">开始</button>
-                    <button id="stopBtn_huanjie6_fan" class="btnPause">停止</button>
-                    <button id="resetBtn_huanjie6_fan" class="btnReset">重置</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Single Timer End, Huanjie 6 -->
-
-
-
-
-
-    <!-- Double Timer, Huanjie 9 -->
+    <!-- Double Timer, Huanjie 8 -->
     <div class="container-fluid">
         <!-- Push content down -->
         <div class="row text-center margin-top-sm"></div>
@@ -424,14 +448,14 @@
         <div class="row margin-top-md">
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_left">正方</h1>
+                    <h1 class="bian_name_left">执政党</h1>
                 </div>
             </div>
             <div class="col-lg-2 text-center">
             </div>
             <div class="col-lg-5">
                 <div>
-                    <h1 class="bian_name_right">反方</h1>
+                    <h1 class="bian_name_right">反对党</h1>
                 </div>
             </div>
         </div>
@@ -439,36 +463,30 @@
 
         <div class="row">
             <div class="col-lg-5 text-center">
-                <h1 id="time_huanjie9_zheng"></h1>
+                <h1 id="time_huanjie8_zheng"></h1>
 
                 <div class="btn-group" role="group">
-                    <button id="beginBtn_huanjie9_zheng" class="btnStart">开始</button>
-                    <button id="stopBtn_huanjie9_zheng" class="btnPause">停止</button>
-                    <button id="resetBtn_huanjie9_zheng" class="btnReset">重置</button>
+                    <button id="beginBtn_huanjie8_zheng" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie8_zheng" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie8_zheng" class="btnReset">重置</button>
                 </div>
             </div>
             <div class="col-lg-2 text-center">
-                <span class="text-center" style="color: black; font-size: 4.5rem">教练打岔</span>
+                <span class="text-center">缓冲时间</span>
             </div>
             <div class="col-lg-5 text-center">
-                <h1 id="time_huanjie9_fan"></h1>
+                <h1 id="time_huanjie8_fan"></h1>
 
                 <div class="btn-group" role="group" >
-                    <button id="beginBtn_huanjie9_fan" class="btnStart">开始</button>
-                    <button id="stopBtn_huanjie9_fan" class="btnPause">停止</button>
-                    <button id="resetBtn_huanjie9_fan" class="btnReset">重置</button>
+                    <button id="beginBtn_huanjie8_fan" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie8_fan" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie8_fan" class="btnReset">重置</button>
                 </div>
 
             </div>
         </div>
     </div>
-    <!-- Double Timer End, Huanjie 9 -->
-
-
-
-
-
-
+    <!-- Double Timer End, Huanjie 8 -->  
 
 </div>
 
